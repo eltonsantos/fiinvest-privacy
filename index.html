@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Política de Privacidade – FIInvest</title>
-  <meta name="description" content="Política de Privacidade do aplicativo FIInvest. Transparência sobre coleta, uso e proteção de dados.">
+  <meta name="description" content="Política de Privacidade do aplicativo FIInvest, em conformidade com a LGPD. Transparência sobre coleta, uso, proteção, retenção e direitos dos titulares de dados.">
   <meta property="og:title" content="Política de Privacidade – FIInvest">
   <meta property="og:description" content="Política de Privacidade do aplicativo FIInvest.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0f172a">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><rect width='256' height='256' rx='48' fill='%230f172a'/><path d='M40 176l48-64 40 40 56-80 32 24-72 96-40-40-32 24z' fill='%2334d399'/></svg>">
+
   <style>
     :root{
       --bg: #0b0f1a;
@@ -19,22 +20,114 @@
       --accent:#22c55e;
       --card:#111827;
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0d1324);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
-    .wrap{max-width:860px;margin:0 auto;padding:40px 20px}
-    header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-    .logo{width:36px;height:36px;display:grid;place-items:center;background:#0f172a;border-radius:10px}
-    .logo svg{width:24px;height:24px}
-    h1{font-size:clamp(1.6rem,3vw,2rem);margin:0}
-    .card{background:rgba(17,24,39,.7);backdrop-filter:saturate(140%) blur(6px);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:24px}
-    h2{font-size:1.1rem;margin-top:1.4rem;color:#cbd5e1}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .muted{color:var(--muted)}
-    footer{margin-top:32px;color:#94a3b8;font-size:.9rem}
-    code{background:#0f172a;padding:.1rem .35rem;border-radius:6px}
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:linear-gradient(180deg,var(--bg),#0d1324);
+      color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+    }
+
+    .wrap{
+      max-width:920px;
+      margin:0 auto;
+      padding:40px 20px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:24px;
+    }
+
+    .logo{
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      background:#0f172a;
+      border-radius:10px;
+      flex:0 0 auto;
+    }
+
+    .logo svg{
+      width:24px;
+      height:24px;
+    }
+
+    h1{
+      font-size:clamp(1.6rem,3vw,2rem);
+      margin:0;
+      line-height:1.2;
+    }
+
+    .card{
+      background:rgba(17,24,39,.7);
+      backdrop-filter:saturate(140%) blur(6px);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px;
+      padding:24px;
+    }
+
+    h2{
+      font-size:1.15rem;
+      margin-top:1.6rem;
+      color:#cbd5e1;
+    }
+
+    h3{
+      font-size:1rem;
+      margin-top:1rem;
+      color:#d1d5db;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:32px;
+      color:#94a3b8;
+      font-size:.9rem;
+    }
+
+    code{
+      background:#0f172a;
+      padding:.1rem .35rem;
+      border-radius:6px;
+    }
+
+    ul{
+      padding-left:1.3rem;
+    }
+
+    li{
+      margin-bottom:.35rem;
+    }
+
+    .notice{
+      border-left:4px solid var(--accent);
+      padding:12px 14px;
+      background:rgba(34,197,94,.08);
+      border-radius:10px;
+      margin:18px 0;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -46,43 +139,279 @@
       </div>
       <div>
         <h1>Política de Privacidade – FIInvest</h1>
-        <div class="muted">Última atualização: 13/08/2025</div>
+        <div class="muted">Última atualização: <span id="ultima-atualizacao">02/05/2026</span></div>
       </div>
     </header>
 
     <main class="card" role="main">
-      <p>O FIInvest respeita a sua privacidade e está comprometido em proteger os dados pessoais que você nos fornece.</p>
+      <p>
+        Esta Política de Privacidade explica como o aplicativo <strong>FIInvest</strong> coleta, utiliza,
+        armazena, compartilha e protege dados pessoais dos usuários, em conformidade com a
+        Lei Geral de Proteção de Dados Pessoais — LGPD, Lei nº 13.709/2018.
+      </p>
 
-      <h2>1. Coleta de Informações</h2>
-      <p>Podemos coletar dados como nome, e-mail e informações sobre investimentos, exclusivamente para funcionamento do aplicativo.</p>
+      <div class="notice">
+        <strong>Resumo:</strong> o FIInvest utiliza dados pessoais apenas para permitir o funcionamento do aplicativo,
+        gerenciar recursos da conta, exibir informações da carteira cadastrada pelo usuário, liberar recursos pagos,
+        enviar notificações quando autorizadas, melhorar a experiência, manter a segurança e cumprir obrigações legais.
+      </div>
 
-      <h2>2. Uso das Informações</h2>
+      <h2>1. Identificação do Controlador</h2>
+      <p>
+        Para fins da LGPD, o responsável pelo tratamento dos dados pessoais relacionados ao FIInvest é:
+      </p>
       <ul>
-        <li>Gerenciar sua conta e preferências;</li>
-        <li>Exibir dados financeiros e gráficos;</li>
-        <li>Melhorar a experiência no aplicativo.</li>
+        <li><strong>Nome:</strong> Elton Santos</li>
+        <li><strong>Cidade:</strong> Fundão, Portugal</li>
+        <li><strong>E-mail de contato:</strong> <a href="mailto:elton.melo.santos@gmail.com">elton.melo.santos@gmail.com</a></li>
       </ul>
 
-      <h2>3. Compartilhamento de Dados</h2>
-      <p>Não compartilhamos seus dados pessoais com terceiros, exceto quando exigido por lei.</p>
+      <h2>2. Dados Pessoais que Podemos Coletar</h2>
+      <p>
+        O FIInvest pode coletar e tratar diferentes tipos de dados, conforme as funcionalidades utilizadas pelo usuário.
+      </p>
 
-      <h2>4. Segurança</h2>
-      <p>Adotamos medidas de segurança compatíveis com as melhores práticas do mercado para proteger suas informações.</p>
+      <h3>2.1. Dados de cadastro e identificação</h3>
+      <ul>
+        <li>Nome, quando informado pelo usuário;</li>
+        <li>E-mail, quando necessário para login, suporte, identificação da conta ou recursos vinculados ao usuário;</li>
+        <li>Identificador interno de usuário no aplicativo;</li>
+        <li>Informações de autenticação, quando aplicável.</li>
+      </ul>
 
-      <h2>5. Direitos do Usuário</h2>
-      <p>Você pode solicitar a atualização ou exclusão de seus dados a qualquer momento pelo e-mail <a href="mailto:suporte@fiinvest.com">suporte@fiinvest.com</a>.</p>
+      <h3>2.2. Dados financeiros inseridos pelo usuário</h3>
+      <ul>
+        <li>Ativos, FIIs, ações ou outros investimentos cadastrados manualmente;</li>
+        <li>Quantidade de cotas ou ações;</li>
+        <li>Valores investidos, preço médio, datas de compra, venda ou movimentação;</li>
+        <li>Proventos, dividendos, rendimentos, amortizações e demais informações financeiras registradas no aplicativo;</li>
+        <li>Histórico, gráficos, relatórios e preferências de visualização da carteira.</li>
+      </ul>
 
-      <h2>6. Alterações nesta Política</h2>
-      <p>Podemos atualizar esta política periodicamente. As alterações serão publicadas nesta página.</p>
+      <h3>2.3. Dados técnicos e de uso</h3>
+      <ul>
+        <li>Modelo do dispositivo, sistema operacional, versão do aplicativo e idioma;</li>
+        <li>Registros de erro, logs técnicos, falhas e eventos de desempenho;</li>
+        <li>Dados aproximados de navegação e uso das funcionalidades;</li>
+        <li>Identificadores técnicos necessários para notificações, anúncios, segurança, assinatura PRO ou funcionamento do app.</li>
+      </ul>
 
-      <h2>Contato</h2>
-      <p>Em caso de dúvidas, entre em contato pelo e-mail <a href="mailto:suporte@fiinvest.com">suporte@fiinvest.com</a>.</p>
+      <h3>2.4. Dados de assinatura, compras e benefícios PRO</h3>
+      <ul>
+        <li>Status da assinatura ou compra PRO;</li>
+        <li>Identificadores de compra fornecidos pela loja de aplicativos ou plataforma de assinatura;</li>
+        <li>Informações necessárias para validar pagamentos, restaurar compras e liberar benefícios pagos.</li>
+      </ul>
+
+      <p>
+        O FIInvest não solicita senhas bancárias, credenciais de corretoras, número completo de cartão de crédito
+        ou dados bancários sensíveis. Caso alguma integração futura com B3, corretoras, bancos ou outras instituições
+        financeiras seja disponibilizada, ela será apresentada ao usuário de forma clara e dependerá das autorizações
+        necessárias.
+      </p>
+
+      <h2>3. Finalidades do Tratamento dos Dados</h2>
+      <p>
+        Os dados pessoais podem ser utilizados para as seguintes finalidades:
+      </p>
+      <ul>
+        <li>Criar, autenticar e gerenciar o acesso do usuário ao aplicativo;</li>
+        <li>Permitir o cadastro, controle, histórico e visualização da carteira de investimentos;</li>
+        <li>Gerar gráficos, relatórios, indicadores, projeções e informações financeiras dentro do app;</li>
+        <li>Enviar notificações relacionadas a dividendos, proventos, lembretes ou funcionalidades, quando autorizadas;</li>
+        <li>Validar assinaturas, compras, restauração de acesso e benefícios da versão PRO;</li>
+        <li>Exibir anúncios na versão gratuita, quando aplicável;</li>
+        <li>Responder solicitações de suporte enviadas pelo usuário;</li>
+        <li>Prevenir fraudes, abusos, falhas técnicas, acessos indevidos e uso irregular;</li>
+        <li>Melhorar funcionalidades, desempenho, estabilidade, segurança e experiência do usuário;</li>
+        <li>Cumprir obrigações legais, regulatórias ou ordens de autoridades competentes.</li>
+      </ul>
+
+      <h2>4. Bases Legais Utilizadas</h2>
+      <p>
+        O tratamento de dados pessoais pelo FIInvest poderá ocorrer com fundamento nas seguintes bases legais da LGPD:
+      </p>
+      <ul>
+        <li><strong>Execução de contrato:</strong> para fornecer as funcionalidades do aplicativo e recursos contratados pelo usuário;</li>
+        <li><strong>Consentimento:</strong> quando necessário para notificações, permissões do dispositivo ou integrações opcionais;</li>
+        <li><strong>Legítimo interesse:</strong> para melhorar o app, manter segurança, prevenir fraudes, corrigir falhas e analisar uso de forma proporcional;</li>
+        <li><strong>Cumprimento de obrigação legal ou regulatória:</strong> quando houver exigência legal aplicável;</li>
+        <li><strong>Exercício regular de direitos:</strong> para defesa em processos administrativos, judiciais ou arbitrais, quando necessário.</li>
+      </ul>
+
+      <h2>5. Compartilhamento de Dados com Terceiros</h2>
+      <p>
+        O FIInvest não vende dados pessoais dos usuários. Entretanto, alguns dados podem ser compartilhados com
+        fornecedores e plataformas necessários para a operação do aplicativo, sempre de acordo com as finalidades
+        descritas nesta Política.
+      </p>
+
+      <p>Podemos utilizar serviços de terceiros para:</p>
+      <ul>
+        <li>Hospedagem de backend, banco de dados e infraestrutura;</li>
+        <li>Autenticação e gerenciamento de usuários;</li>
+        <li>Processamento, validação e restauração de assinaturas ou compras no aplicativo;</li>
+        <li>Envio de notificações push, quando o usuário permitir;</li>
+        <li>Exibição e medição de anúncios na versão gratuita, quando aplicável;</li>
+        <li>Análise de falhas, métricas técnicas e melhoria de desempenho;</li>
+        <li>Atendimento de solicitações de suporte.</li>
+      </ul>
+
+      <p>
+        Esses fornecedores devem tratar os dados apenas conforme necessário para a prestação dos serviços utilizados
+        pelo FIInvest e de acordo com suas próprias políticas de privacidade e obrigações legais aplicáveis.
+      </p>
+
+      <h2>6. Anúncios e Versão Gratuita</h2>
+      <p>
+        Na versão gratuita, o FIInvest poderá exibir anúncios por meio de plataformas de publicidade de terceiros.
+        Essas plataformas podem utilizar identificadores técnicos do dispositivo, dados de interação com anúncios
+        e informações aproximadas de uso para exibir, limitar, medir ou melhorar anúncios.
+      </p>
+
+      <p>
+        Usuários da versão PRO podem ter benefícios como remoção de anúncios e desbloqueio de recursos adicionais,
+        conforme as regras apresentadas no aplicativo e na loja de aplicativos correspondente.
+      </p>
+
+      <h2>7. Notificações</h2>
+      <p>
+        O FIInvest poderá enviar notificações relacionadas a funcionalidades do aplicativo, como alertas de proventos,
+        dividendos, lembretes ou informações relevantes da carteira. O envio de notificações depende da autorização
+        do usuário no dispositivo e pode ser desativado a qualquer momento nas configurações do sistema operacional.
+      </p>
+
+      <h2>8. Retenção e Exclusão dos Dados</h2>
+      <p>
+        Os dados pessoais serão mantidos pelo tempo necessário para cumprir as finalidades descritas nesta Política,
+        fornecer o serviço ao usuário, cumprir obrigações legais, resolver disputas, prevenir fraudes e preservar direitos.
+      </p>
+
+      <p>
+        Quando os dados deixarem de ser necessários, serão eliminados ou anonimizados, salvo quando a retenção for
+        permitida ou exigida por lei. O usuário pode solicitar a exclusão de seus dados pelo canal de contato informado
+        nesta Política.
+      </p>
+
+      <h2>9. Segurança dos Dados</h2>
+      <p>
+        Adotamos medidas técnicas e administrativas razoáveis para proteger os dados pessoais contra acessos não
+        autorizados, perda, uso indevido, alteração, divulgação ou destruição indevida.
+      </p>
+
+      <p>
+        Apesar dos esforços de segurança, nenhum sistema é totalmente imune a falhas, ataques ou incidentes.
+        Caso ocorra incidente de segurança relevante envolvendo dados pessoais, serão adotadas as medidas cabíveis
+        conforme a legislação aplicável.
+      </p>
+
+      <h2>10. Direitos do Titular dos Dados</h2>
+      <p>
+        Nos termos da LGPD, o usuário pode solicitar, quando aplicável:
+      </p>
+      <ul>
+        <li>Confirmação da existência de tratamento de dados pessoais;</li>
+        <li>Acesso aos dados pessoais tratados;</li>
+        <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD;</li>
+        <li>Portabilidade dos dados, observadas as regras da autoridade competente;</li>
+        <li>Informação sobre compartilhamento de dados com terceiros;</li>
+        <li>Revogação do consentimento, quando o tratamento se basear em consentimento;</li>
+        <li>Eliminação dos dados tratados com base no consentimento, observadas hipóteses legais de retenção;</li>
+        <li>Revisão de decisões automatizadas, quando aplicável;</li>
+        <li>Oposição a tratamentos realizados em desconformidade com a LGPD.</li>
+      </ul>
+
+      <p>
+        Para exercer seus direitos, envie uma solicitação para
+        <a href="mailto:elton.melo.santos@gmail.com">elton.melo.santos@gmail.com</a>.
+        Poderemos solicitar informações adicionais para confirmar sua identidade e proteger sua conta contra acessos indevidos.
+      </p>
+
+      <h2>11. Crianças e Adolescentes</h2>
+      <p>
+        O FIInvest não é direcionado a crianças. O aplicativo é destinado a usuários capazes de compreender e gerenciar
+        informações financeiras. Caso identifiquemos tratamento indevido de dados de crianças ou adolescentes sem a
+        autorização necessária, poderemos remover os dados correspondentes.
+      </p>
+
+      <h2>12. Transferência Internacional de Dados</h2>
+      <p>
+        Como o responsável pelo FIInvest está localizado em Portugal e alguns fornecedores de tecnologia podem operar
+        servidores fora do Brasil, os dados pessoais podem ser tratados ou armazenados em outros países. Quando isso
+        ocorrer, serão adotadas medidas razoáveis para proteger os dados pessoais conforme a LGPD e demais normas
+        aplicáveis.
+      </p>
+
+      <h2>13. Integrações com Terceiros</h2>
+      <p>
+        O FIInvest poderá oferecer integrações opcionais com serviços externos, como plataformas de autenticação,
+        pagamentos, notificações, anúncios, análise técnica ou, futuramente, fontes de dados de mercado e instituições
+        financeiras.
+      </p>
+
+      <p>
+        Ao utilizar serviços de terceiros, o usuário também poderá estar sujeito às políticas de privacidade e termos
+        desses terceiros. Recomendamos a leitura dessas políticas antes de utilizar integrações externas.
+      </p>
+
+      <h2>14. Dados Financeiros e Responsabilidade do Usuário</h2>
+      <p>
+        As informações exibidas no FIInvest têm finalidade de organização, controle e acompanhamento financeiro.
+        O aplicativo não presta consultoria de investimentos, recomendação personalizada, intermediação financeira,
+        corretagem, gestão profissional de carteira ou qualquer serviço regulado de consultoria financeira.
+      </p>
+
+      <p>
+        O usuário é responsável pela veracidade dos dados que cadastra manualmente no aplicativo e pelas decisões
+        financeiras tomadas com base em suas próprias análises.
+      </p>
+
+      <h2>15. Alterações nesta Política</h2>
+      <p>
+        Esta Política de Privacidade poderá ser atualizada periodicamente para refletir alterações legais,
+        técnicas ou operacionais do FIInvest.
+      </p>
+
+      <p>
+        Quando houver alterações relevantes, poderemos informar os usuários por meio do aplicativo, por e-mail ou
+        pela publicação da nova versão nesta página.
+      </p>
+
+      <h2>16. Contato</h2>
+      <p>
+        Em caso de dúvidas, solicitações ou reclamações relacionadas a esta Política de Privacidade ou ao tratamento
+        de dados pessoais, entre em contato pelo e-mail:
+        <a href="mailto:elton.melo.santos@gmail.com">elton.melo.santos@gmail.com</a>.
+      </p>
     </main>
 
     <footer>
-      <p>© 2025 FIInvest. Todos os direitos reservados.</p>
-      <p class="muted">Esta página pode ser hospedada no GitHub Pages, Netlify ou em outro provedor de hospedagem estática.</p>
+      <p>© <span id="ano-atual">2026</span> FIInvest. Todos os direitos reservados.</p>
+      <p class="muted">Esta página pode ser hospedada no GitHub Pages, Netlify, Vercel ou outro provedor de hospedagem estática.</p>
     </footer>
   </div>
+
+  <script>
+    (function () {
+      const hoje = new Date();
+      const dataFormatada = hoje.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      });
+
+      const ultimaAtualizacao = document.getElementById('ultima-atualizacao');
+      const anoAtual = document.getElementById('ano-atual');
+
+      if (ultimaAtualizacao) {
+        ultimaAtualizacao.textContent = dataFormatada;
+      }
+
+      if (anoAtual) {
+        anoAtual.textContent = String(hoje.getFullYear());
+      }
+    })();
+  </script>
 </body>
 </html>
